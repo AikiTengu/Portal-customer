@@ -32,8 +32,8 @@ public class CustomerController {
         return customerDAO.save(customer);
     }
 
-    @DeleteMapping({"/customerId"})
-    public boolean remove(@PathVariable("customerId") int customerId){
+    @DeleteMapping("/{customerId}")
+    public String remove(@PathVariable("customerId") int customerId){
         return customerDAO.deleteCustomer(customerId);
     }
 }

@@ -29,8 +29,8 @@ public class CustomerDAO {
         return (Customer) redisTemplate.opsForHash().get(HASH_KEY,customerId);
     }
 
-    public boolean deleteCustomer(int customerId){
+    public String deleteCustomer(int customerId){
         redisTemplate.opsForHash().delete(HASH_KEY, customerId);
-        return true;
+        return "Deleted customer";
     }
 }
