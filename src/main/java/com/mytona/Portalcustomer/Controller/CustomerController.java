@@ -1,17 +1,15 @@
 package com.mytona.Portalcustomer.Controller;
 
 import com.mytona.Portalcustomer.Model.Entity.Customer;
-import com.mytona.Portalcustomer.Model.Repository.CustomerDAO;
+import com.mytona.Portalcustomer.Model.DAO.CustomerDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.ws.rs.Path;
 import java.util.List;
 
 
 @RestController
 @RequestMapping("/customers")
-
 public class CustomerController {
 
     @Autowired

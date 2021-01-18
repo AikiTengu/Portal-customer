@@ -1,4 +1,4 @@
-package com.mytona.Portalcustomer.Model.Repository;
+package com.mytona.Portalcustomer.Model.DAO;
 
 import com.mytona.Portalcustomer.Model.Entity.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
