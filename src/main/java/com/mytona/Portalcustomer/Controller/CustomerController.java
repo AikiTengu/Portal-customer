@@ -18,12 +18,12 @@ public class CustomerController {
     private CustomerDAO customerDAO;
 
     @GetMapping("/{customerId}")
-    public Customer getCustomer(@PathVariable("customerId") int customerId) {
+    public Customer get(@PathVariable("customerId") long customerId) {
         return customerDAO.findCustomer(customerId);
     }
 
     @GetMapping("/all")
-    public List<Customer> getAllCustomers(){
+    public List<Customer> getAll(){
         return customerDAO.findAll();
     }
 
@@ -33,7 +33,7 @@ public class CustomerController {
     }
 
     @DeleteMapping("/{customerId}")
-    public String remove(@PathVariable("customerId") int customerId){
+    public String remove(@PathVariable("customerId") long customerId){
         return customerDAO.deleteCustomer(customerId);
     }
 }

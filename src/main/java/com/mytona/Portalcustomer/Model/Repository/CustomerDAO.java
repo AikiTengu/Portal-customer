@@ -25,11 +25,11 @@ public class CustomerDAO {
         return redisTemplate.opsForHash().values(HASH_KEY);
     }
 
-    public Customer findCustomer(int customerId){
+    public Customer findCustomer(long customerId){
         return (Customer) redisTemplate.opsForHash().get(HASH_KEY,customerId);
     }
 
-    public String deleteCustomer(int customerId){
+    public String deleteCustomer(long customerId){
         redisTemplate.opsForHash().delete(HASH_KEY, customerId);
         return "Deleted customer";
     }

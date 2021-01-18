@@ -15,9 +15,8 @@ import java.io.Serializable;
 public class Customer implements Serializable {
 
     @Id
-    private int customerId;
-    private int orderId;
+    private long customerId;
     private String firstName;
     private String secondName;
-
+    private String address;
 }
